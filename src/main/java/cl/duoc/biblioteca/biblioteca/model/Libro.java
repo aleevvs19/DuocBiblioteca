@@ -1,11 +1,7 @@
 package cl.duoc.biblioteca.biblioteca.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Table(name = "libro")
@@ -15,6 +11,7 @@ import lombok.NoArgsConstructor;
 public class Libro {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String isbn;
